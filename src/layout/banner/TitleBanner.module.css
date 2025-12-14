@@ -1,0 +1,22 @@
+.banner {
+  width: 100%;
+  aspect-ratio: 1920/440;
+  background-size: cover;
+  transition: all 0.2s ease;
+}
+
+.icon {
+  width: 1em;
+}
+
+@media (min-width: 769px) and (max-width: 1600px) {
+  .banner div {
+    margin: 6vw;
+  }
+}
+@media (max-width: 768px) {
+  .banner div {
+    text-align: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=TitleBanner.module.css.map */

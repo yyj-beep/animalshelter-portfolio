@@ -1,0 +1,32 @@
+
+//modal 전체 너비 조정
+.modal-style{ 
+   max-width: 950px; 
+   width: 90%;
+
+}
+
+//info section 
+.info-wrap{
+ display: flex; 
+ flex-wrap: wrap;
+ width: 830px; height: auto; 
+ margin: 0 auto;
+}
+
+//modal.header 와 body사이 line
+.line{width: 87%; border: 1px dotted #DADADA; margin: 0 auto;}
+
+.modal-header, .modal-footer{border: none;}
+
+@media (max-width:769px){
+   .modal-style{ width: 700px !important;}
+}
+
+
+
+
+
+
+
+

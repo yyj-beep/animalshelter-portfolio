@@ -1,0 +1,13 @@
+.galleryTop button {
+  padding: 10px 16px;
+  border-radius: 100px;
+}
+.galleryTop button:hover span, .galleryTop button:active span, .galleryTop button:focus span {
+  color: #fff;
+}
+.galleryTop button:hover svg, .galleryTop button:active svg, .galleryTop button:focus svg {
+  stroke: #fff;
+}
+.galleryTop .topIcon {
+  fill: #FDE8C7;
+}/*# sourceMappingURL=Gallery.module.css.map */

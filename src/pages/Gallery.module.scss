@@ -1,0 +1,14 @@
+.galleryTop{
+    button{
+        padding:10px 16px;
+        border-radius:100px;
+
+        &:hover, &:active, &:focus{
+            span{color:#fff;}
+            svg{stroke:#fff;}
+    }
+    }
+    .topIcon{
+        fill:#FDE8C7;
+    }
+}

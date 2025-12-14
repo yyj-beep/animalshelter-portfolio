@@ -1,0 +1,59 @@
+.info-wrap{margin-left: 1vw;}
+.img-fluid{
+  width: 350px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+//info 관련 정렬
+.info-box{margin-left: 50px;}
+//코코브라더스, 모집중 정렬
+.info-title{width: 200px; 
+  display: flex;
+  align-items: center;
+  
+}
+.recruit{width: 50px; height: 20px; 
+  border-radius: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  
+}
+
+.p-ml1{margin-left: 55px;}
+.p-ml2{margin-left: 35px;}
+.p-ml3{margin-left: 15px;}
+
+.detail-btn{
+  width: 85px; height: 37px; 
+  border-radius: 7px;
+  background-color: #3A7F78;
+  text-align: center;
+  line-height: 37px;
+  color: white;
+  margin-left: 1vw;
+}
+.detail-wrap{display: flex;}
+
+.detail-content{margin-left: 1vw;}
+.author-interaction-section{margin-left: 3vw;}
+
+.report-btn{border-radius: 50px;}
+.line-width{
+  width: 95%;
+  border: 1px dotted #CAcaca;
+  margin: 0 auto;
+}
+
+
+
+
+
+/* src/styles/_PostModal.scss */
+
+// Bootstrap 변수를 오버라이드하거나 직접 사용
+
+

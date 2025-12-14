@@ -1,0 +1,39 @@
+.warp {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-top: 50px;
+}
+.warp .cardImg {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.warp .cardImg .imagefit {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.warp .hashtag {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+.warp .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.warp .side {
+  margin-top: 2px;
+  gap: 6px;
+}
+.warp .side span:nth-child(2) {
+  padding: 0px 5px;
+  border-color: #DADADA !important;
+}/*# sourceMappingURL=GalleryDetail.module.css.map */

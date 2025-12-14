@@ -1,0 +1,102 @@
+.header{
+    background-color:rgba(250, 249, 246, 0.1);
+    backdrop-filter:blur(30px);
+    height:120px;
+}
+
+.logo{
+    width:150px;
+    min-width:150px;
+    aspect-ratio:328/73;
+    background:url('../../assets/img/logo.png')no-repeat center center;
+    background-size:cover;
+}
+
+.label{white-space:nowrap;}
+
+.headerLeft{
+    position:relative;
+
+    .panel{
+        position:absolute;
+        top:5em; width:100%;
+        padding:30px;
+        border-radius:20px;
+        background:linear-gradient(#fff, #FAF9F6);
+        box-shadow:0 0 30px rgba(0,0,0,.1);
+
+        &::before{
+            content:"";                
+            position:absolute;
+            width:0; height:0; top:-10px;
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            border-bottom:16px solid white;
+        }
+
+        &.arrow_nav1::before{left:12%;}
+        &.arrow_nav2::before{left:39%;}
+        &.arrow_nav3::before{right:32%;}
+        &.arrow_nav4::before{right:7%;}
+        
+
+        .hLink{
+            height:40px;
+            transition:all .1s ease;
+            &:hover,&:focus{color:#F8B661;}
+        }
+        
+        .iconWrap{
+            position:relative;
+            width:20px; height:20px;
+        
+            .iconLeft{
+                position:absolute;
+                width:100%; height:100%;
+                top:0; left:0;
+                stroke:#F8B661;
+                fill:#F8B661;
+                pointer-events:none;
+                transition: all .2s ease;
+            }
+
+            .visible{opacity:1;}
+            .hidden{opacity:0;}
+        } 
+    }
+}
+
+.iconRight{width:16px; height:16px;}
+
+
+
+
+// mobile.Ver _______________________________________________________
+
+.menubar{
+    border:none;
+    &:active,&:focus,&:hover{
+        outline:none !important;
+        box-shadow:none !important;
+    }
+}
+
+
+.dropItem{padding:8px 20px;
+    .iconLeft{
+        width:18px; height:18px;
+        stroke:#F8B661;
+        fill:#F8B661;
+    }
+
+}
+
+
+
+@media (max-width:786px){
+    .header{
+        background-color:#FFF;
+        backdrop-filter:none;
+        height:80px;
+    }
+}

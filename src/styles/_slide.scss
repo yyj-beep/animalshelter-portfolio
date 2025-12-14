@@ -1,0 +1,75 @@
+/*=== main slide css ===*/
+
+.primary-btn{
+  padding:10px 16px;
+  border-radius:100px;
+
+  &:hover, &:active, &:focus{
+      span{color:#fff;}
+      svg{stroke:#fff;}
+  }
+}
+
+@media (max-width:786px){
+  .primary-btn{
+    padding:5px 8px;
+    .primary-stroke{width:12px;}
+  }
+}
+
+//-------------------------------------------------------------
+
+
+
+.animal-gallery {
+  margin: 0 auto;
+
+  .slide-title{white-space: nowrap;}
+   .img-style{
+    margin: 0 auto;
+    width: 100%;
+    aspect-ratio:1/1;
+    border-radius: 20px;
+    object-fit: cover;
+    transition:all .2s ease;
+    }
+
+  .gallery-row {
+    margin-top: 16px;
+    display: grid;
+    gap:16px;
+
+    &--1 {grid-template-columns: repeat(4, 1fr);}
+    &--2 {grid-template-columns: repeat(4, 1fr);}
+  }
+
+  @media (max-width:1439.98px){
+  
+  .gallery-row--1 {
+    grid-template-columns: repeat(4, 1fr);
+    }
+  .gallery-row--2{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width:768px){
+  .animal-gallery {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;}
+
+    .gallery-row {
+      
+      &--1 {
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &--2{
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  height: 80px;
+  border-radius: 20px;
+}
+
+.content {
+  height: 100px;
+}
+.content .titleBadge {
+  border-radius: 10px;
+  margin-right: 24px;
+}
+.content .icon {
+  width: 20px;
+  height: 20px;
+  fill: #707070;
+}
+.content .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content time {
+  text-align: center;
+}
+
+.noTop .topIcon {
+  width: 36px;
+  height: 36px;
+  fill: #FDE8C7;
+}/*# sourceMappingURL=Notice.module.css.map */

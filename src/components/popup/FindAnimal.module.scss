@@ -1,0 +1,96 @@
+.popup{
+
+    .closedButton{
+        padding:0;
+        background-color:transparent;
+        &:hover, &:focus, &:active{background-color:transparent;}
+    }
+
+    .top{height:44px;
+        
+        .topIcon{width:24px; height:24px;}
+        .circle{
+            width:10px; height:10px;
+            border-radius:50%;
+            background-color:#2E3A3A;
+        }
+    }
+
+    .content{border-radius:10px;
+        .title{font-size:28px;
+
+            mark{
+                position:relative;
+                top:-0.25em;
+                height:24px;
+                padding:0 40px;
+                line-height:.38;
+                display:inline-block;
+            }
+
+            .cursorIcon{
+                position:relative;
+                left:-.8em; top:0.15em;
+                width:28px; height:28px;
+                fill:#fff;
+                stroke:#2E3A3A;
+                stroke-width:.8em;
+                
+            }
+        }
+
+        .underline{
+            border-bottom:1px dashed #DADADA;
+            padding:12px;
+
+            &:hover{
+                .lIcon{stroke-width:2px; stroke:#D2914E}
+                .rBtn{border-color:#D2914E;
+                .rIcon{fill:#D2914E;}
+                }
+                .txtSize span{background-size: 100% 100%;}
+                
+            }
+
+            .lIcon{
+                width:36px; height:36px;
+                stroke-width:1.5px;
+                transition: all .2s ease;
+            }
+
+            .rBtn{
+                padding:6px;
+                border-radius:50%;
+                background-color:transparent;
+                border:1px solid #2E3A3A;
+                transition: all .2s ease;
+
+                .rIcon{
+                    width:20px; height:20px;
+                    fill:#2E3A3A;
+                    stroke:none;
+                    stroke-width:1px;
+                    transition: all .2s ease;
+                }
+            }
+
+            .txtSize{
+                font-size:18px;
+                font-weight:300;
+                width:100%;
+                span{
+                    background:linear-gradient(to right, #FDE8C7 100%, transparent 0%) no-repeat;
+                    background-size:100% 0%;
+                    transition:all 0.5s ease;
+                    background-position:left;
+                }
+            }
+
+        }
+
+        
+    }
+    
+
+    
+}

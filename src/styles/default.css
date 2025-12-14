@@ -1,0 +1,803 @@
+@charset "UTF-8";
+html, * {
+  margin: 0;
+  padding: 0;
+  color: #2e3a3a;
+  word-break: keep-all;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol, li, dl, dt, dd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+h1 {
+  font-family: "Cafe24Ohsquare", sans-serif;
+  font-size: 48px;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-family: "Cafe24Ohsquare", sans-serif;
+  font-size: 35px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500 !important;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500 !important;
+  line-height: 1.8em;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+.display-1 {
+  all: unset;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700 !important;
+  font-size: 80px;
+  font-feature-settings: "ss04" on;
+}
+
+.body-large {
+  font-size: 20px;
+  line-height: 1.8em;
+  font-weight: 400 !important;
+}
+
+.body-small {
+  font-size: 14px;
+  line-height: 1.8em;
+  font-weight: 400 !important;
+}
+
+.nav-default {
+  font-family: "Cafe24Ohsquare", sans-serif;
+  font-size: 18px;
+}
+
+.nav-small {
+  font-family: "Montserrat", "Poppins", "S-CoreDream", sans-serif;
+  font-size: 14px;
+  font-weight: 500 !important;
+}
+
+.btn-custom {
+  font-size: 16px;
+  font-weight: 600 !important;
+}
+
+.caption {
+  font-size: 14px;
+  font-weight: 500 !important;
+  line-height: 1.5em;
+}
+
+.tab {
+  font-size: 12px;
+  font-weight: 500 !important;
+  line-height: 1.2em;
+}
+
+.num {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ✅ 모바일 대응 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3, h4 {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  p {
+    font-size: 14px;
+  }
+  .display-1 {
+    font-size: 44px;
+  }
+  .body-large {
+    font-size: 16px;
+  }
+  .body-small {
+    font-size: 12px;
+  }
+  .nav-default {
+    font-size: 14px;
+  }
+  .nav-small {
+    font-size: 12px;
+  }
+  .btn-custom {
+    font-size: 10px;
+  }
+  .caption, .tab {
+    font-size: 10px;
+  }
+  .num {
+    font-size: 16px;
+  }
+}
+/* ✅ 태블릿 대응 */
+@media (max-width: 1439.98px) and (min-width: 769px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3, h4 {
+    font-size: 20px;
+  }
+  .display-1 {
+    font-size: 54px;
+  }
+  .body-large {
+    font-size: 18px;
+  }
+  .body-small {
+    font-size: 14px;
+  }
+  .btn-custom {
+    font-size: 12px;
+  }
+  .caption, .tab {
+    font-size: 12px;
+  }
+  .nav-default {
+    font-size: 16px;
+  }
+}
+/*==========================================
+
+
+구조
+------------------------------------------
+
+.(색상명) :글자색 변경
+.(색상명)-line :글자색+외곽선
+.(색상명)-border : 외곽선
+.(색상명)-fill : (아이콘)칠
+.(색상명)-stroke : (아이콘)선
+.(색상명)-bg :배경색 변경
+.(색상명)-bg-btn :배경색 변경 + 호버 시 어두워짐(주요 3색 한정)
+.(색상명)-btn :글자색+외곽선 => 배경색 변경
+.(색상명)-light-OO :상단과 효과 동일 / 단, -bg-btn은 없음
+.(색상명)-dark-OO :상단과 효과 동일 / 단, -bg-btn은 없음
+
+------------------------------------------
+
+
+==========================================*/
+/*==========================================
+클래스 자동 생성
+==========================================*/
+.primary {
+  color: #3A7F78;
+}
+
+.primary-bg {
+  background-color: #3A7F78 !important;
+  color: #fff;
+}
+
+.primary-btn {
+  color: #3A7F78;
+  background-color: transparent;
+  border: 1px solid #3A7F78;
+  transition: all 0.2s ease;
+}
+.primary-btn:hover, .primary-btn:focus, .primary-btn:active {
+  background-color: #3A7F78;
+  color: #fff;
+}
+
+.primary-bg-btn {
+  background-color: #3A7F78;
+  color: #fff;
+  border: 1px solid #3A7F78;
+  transition: all 0.2s ease;
+}
+.primary-bg-btn:hover, .primary-bg-btn:focus, .primary-bg-btn:active {
+  background-color: #285C57 !important;
+}
+
+.primary-border {
+  border-color: #3A7F78;
+}
+
+.primary-fill {
+  fill: #3A7F78;
+}
+
+.primary-stroke {
+  stroke: #3A7F78;
+}
+
+.primary-line {
+  color: #3A7F78;
+  border-color: #3A7F78;
+}
+
+.primary-light {
+  color: #EAF5F4;
+}
+
+.primary-light-bg {
+  background-color: #EAF5F4 !important;
+  color: #fff;
+}
+
+.primary-light-btn {
+  color: #EAF5F4;
+  background-color: transparent;
+  border: 1px solid #EAF5F4;
+  transition: all 0.2s ease;
+}
+.primary-light-btn:hover, .primary-light-btn:focus, .primary-light-btn:active {
+  background-color: #EAF5F4;
+  color: #fff;
+}
+
+.primary-light-border {
+  border-color: #EAF5F4;
+}
+
+.primary-light-fill {
+  fill: #EAF5F4;
+}
+
+.primary-light-stroke {
+  stroke: #EAF5F4;
+}
+
+.primary-light-line {
+  color: #EAF5F4;
+  border-color: #EAF5F4;
+}
+
+.primary-dark {
+  color: #285C57;
+}
+
+.primary-dark-bg {
+  background-color: #285C57 !important;
+  color: #fff;
+}
+
+.primary-dark-btn {
+  color: #285C57;
+  background-color: transparent;
+  border: 1px solid #285C57;
+  transition: all 0.2s ease;
+}
+.primary-dark-btn:hover, .primary-dark-btn:focus, .primary-dark-btn:active {
+  background-color: #285C57;
+  color: #fff;
+}
+
+.primary-dark-border {
+  border-color: #285C57;
+}
+
+.primary-dark-fill {
+  fill: #285C57;
+}
+
+.primary-dark-stroke {
+  stroke: #285C57;
+}
+
+.primary-dark-line {
+  color: #285C57;
+  border-color: #285C57;
+}
+
+.secondary {
+  color: #F8B661;
+}
+
+.secondary-bg {
+  background-color: #F8B661 !important;
+  color: #fff;
+}
+
+.secondary-btn {
+  color: #F8B661;
+  background-color: transparent;
+  border: 1px solid #F8B661;
+  transition: all 0.2s ease;
+}
+.secondary-btn:hover, .secondary-btn:focus, .secondary-btn:active {
+  background-color: #F8B661;
+  color: #fff;
+}
+
+.secondary-bg-btn {
+  background-color: #F8B661;
+  color: #fff;
+  border: 1px solid #F8B661;
+  transition: all 0.2s ease;
+}
+.secondary-bg-btn:hover, .secondary-bg-btn:focus, .secondary-bg-btn:active {
+  background-color: #D2914E !important;
+}
+
+.secondary-border {
+  border-color: #F8B661;
+}
+
+.secondary-fill {
+  fill: #F8B661;
+}
+
+.secondary-stroke {
+  stroke: #F8B661;
+}
+
+.secondary-line {
+  color: #F8B661;
+  border-color: #F8B661;
+}
+
+.secondary-light {
+  color: #FDE8C7;
+}
+
+.secondary-light-bg {
+  background-color: #FDE8C7 !important;
+  color: #fff;
+}
+
+.secondary-light-btn {
+  color: #FDE8C7;
+  background-color: transparent;
+  border: 1px solid #FDE8C7;
+  transition: all 0.2s ease;
+}
+.secondary-light-btn:hover, .secondary-light-btn:focus, .secondary-light-btn:active {
+  background-color: #FDE8C7;
+  color: #fff;
+}
+
+.secondary-light-border {
+  border-color: #FDE8C7;
+}
+
+.secondary-light-fill {
+  fill: #FDE8C7;
+}
+
+.secondary-light-stroke {
+  stroke: #FDE8C7;
+}
+
+.secondary-light-line {
+  color: #FDE8C7;
+  border-color: #FDE8C7;
+}
+
+.secondary-dark {
+  color: #D2914E;
+}
+
+.secondary-dark-bg {
+  background-color: #D2914E !important;
+  color: #fff;
+}
+
+.secondary-dark-btn {
+  color: #D2914E;
+  background-color: transparent;
+  border: 1px solid #D2914E;
+  transition: all 0.2s ease;
+}
+.secondary-dark-btn:hover, .secondary-dark-btn:focus, .secondary-dark-btn:active {
+  background-color: #D2914E;
+  color: #fff;
+}
+
+.secondary-dark-border {
+  border-color: #D2914E;
+}
+
+.secondary-dark-fill {
+  fill: #D2914E;
+}
+
+.secondary-dark-stroke {
+  stroke: #D2914E;
+}
+
+.secondary-dark-line {
+  color: #D2914E;
+  border-color: #D2914E;
+}
+
+.blend {
+  color: #375829;
+}
+
+.blend-bg {
+  background-color: #375829 !important;
+  color: #fff;
+}
+
+.blend-btn {
+  color: #375829;
+  background-color: transparent;
+  border: 1px solid #375829;
+  transition: all 0.2s ease;
+}
+.blend-btn:hover, .blend-btn:focus, .blend-btn:active {
+  background-color: #375829;
+  color: #fff;
+}
+
+.blend-bg-btn {
+  background-color: #375829;
+  color: #fff;
+  border: 1px solid #375829;
+  transition: all 0.2s ease;
+}
+.blend-bg-btn:hover, .blend-bg-btn:focus, .blend-bg-btn:active {
+  background-color: #2B4A30 !important;
+}
+
+.blend-border {
+  border-color: #375829;
+}
+
+.blend-fill {
+  fill: #375829;
+}
+
+.blend-stroke {
+  stroke: #375829;
+}
+
+.blend-line {
+  color: #375829;
+  border-color: #375829;
+}
+
+.blend-light {
+  color: #B1D6AE;
+}
+
+.blend-light-bg {
+  background-color: #B1D6AE !important;
+  color: #fff;
+}
+
+.blend-light-btn {
+  color: #B1D6AE;
+  background-color: transparent;
+  border: 1px solid #B1D6AE;
+  transition: all 0.2s ease;
+}
+.blend-light-btn:hover, .blend-light-btn:focus, .blend-light-btn:active {
+  background-color: #B1D6AE;
+  color: #fff;
+}
+
+.blend-light-border {
+  border-color: #B1D6AE;
+}
+
+.blend-light-fill {
+  fill: #B1D6AE;
+}
+
+.blend-light-stroke {
+  stroke: #B1D6AE;
+}
+
+.blend-light-line {
+  color: #B1D6AE;
+  border-color: #B1D6AE;
+}
+
+.blend-dark {
+  color: #2B4A30;
+}
+
+.blend-dark-bg {
+  background-color: #2B4A30 !important;
+  color: #fff;
+}
+
+.blend-dark-btn {
+  color: #2B4A30;
+  background-color: transparent;
+  border: 1px solid #2B4A30;
+  transition: all 0.2s ease;
+}
+.blend-dark-btn:hover, .blend-dark-btn:focus, .blend-dark-btn:active {
+  background-color: #2B4A30;
+  color: #fff;
+}
+
+.blend-dark-border {
+  border-color: #2B4A30;
+}
+
+.blend-dark-fill {
+  fill: #2B4A30;
+}
+
+.blend-dark-stroke {
+  stroke: #2B4A30;
+}
+
+.blend-dark-line {
+  color: #2B4A30;
+  border-color: #2B4A30;
+}
+
+.danger {
+  color: #d95040;
+}
+
+.danger-bg {
+  background-color: #d95040 !important;
+  color: #fff;
+}
+
+.danger-btn {
+  color: #d95040;
+  background-color: transparent;
+  border: 1px solid #d95040;
+  transition: all 0.2s ease;
+}
+.danger-btn:hover, .danger-btn:focus, .danger-btn:active {
+  background-color: #d95040;
+  color: #fff;
+}
+
+.danger-bg-btn {
+  background-color: #d95040;
+  color: #fff;
+  border: 1px solid #d95040;
+  transition: all 0.2s ease;
+}
+
+.danger-border {
+  border-color: #d95040;
+}
+
+.danger-fill {
+  fill: #d95040;
+}
+
+.danger-stroke {
+  stroke: #d95040;
+}
+
+.danger-line {
+  color: #d95040;
+  border-color: #d95040;
+}
+
+/*==========================================
+기타 색상 정리
+==========================================*/
+.text {
+  color: #2E3A3A !important;
+}
+
+.text-light {
+  color: #BDBDBD !important;
+}
+
+.text-dark {
+  color: #707070 !important;
+}
+
+.bg-color {
+  background-color: #FAF9F6;
+}
+
+.bg-color-badge {
+  background-color: #FAF9F6 !important;
+  color: #707070;
+}
+
+.divider, .dropdown-divider, hr {
+  border-color: #DADADA !important;
+  opacity: 1;
+}
+
+.popup-grid {
+  width: 70%;
+}
+
+.content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid1500 {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.py-A {
+  padding: 100px 0 60px;
+}
+
+.py-B {
+  padding: 40px 0 60px;
+}
+
+.py-C {
+  padding: 100px 0 80px;
+}
+
+@media (max-width: 786px) {
+  .mt-120 {
+    margin-top: 80px;
+  }
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("../assets/fonts/S-CoreDream-5Medium.woff2") format("woff2"), url("../assets/fonts/S-CoreDream-5Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("../assets/fonts/S-CoreDream-4Regular.woff2") format("woff2"), url("../assets/fonts/S-CoreDream-4Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("../assets/fonts/S-CoreDream-3Light.woff2") format("woff2"), url("../assets/fonts/S-CoreDream-3Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("../assets/fonts/S-CoreDream-6Bold.woff2") format("woff2"), url("../assets/fonts/S-CoreDream-6Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cafe24Ohsquare";
+  src: url("../assets/fonts/Cafe24Ohsquare.woff") format("woff"), url("../assets/fonts/Cafe24Ohsquare.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Medium.woff2") format("woff2"), url("../assets/fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Poppins-ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.woff2") format("woff2"), url("../assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.woff2") format("woff2"), url("../assets/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("../assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+body {
+  font-family: "Montserrat", "Poppins", "S-CoreDream", sans-serif;
+  font-weight: 400;
+  color: #2e3a3a;
+}/*# sourceMappingURL=default.css.map */

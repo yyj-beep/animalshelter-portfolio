@@ -1,0 +1,152 @@
+/*==========================================
+
+
+구조
+------------------------------------------
+
+.(색상명) :글자색 변경
+.(색상명)-line :글자색+외곽선
+.(색상명)-border : 외곽선
+.(색상명)-fill : (아이콘)칠
+.(색상명)-stroke : (아이콘)선
+.(색상명)-bg :배경색 변경
+.(색상명)-bg-btn :배경색 변경 + 호버 시 어두워짐(주요 3색 한정)
+.(색상명)-btn :글자색+외곽선 => 배경색 변경
+.(색상명)-light-OO :상단과 효과 동일 / 단, -bg-btn은 없음
+.(색상명)-dark-OO :상단과 효과 동일 / 단, -bg-btn은 없음
+
+------------------------------------------
+
+
+==========================================*/
+
+$colors:(
+    "primary":(
+        color: #3A7F78,
+        dark:#285C57,
+        light:#EAF5F4,
+        contrast:#fff
+    ),
+
+    "secondary":(
+        color: #F8B661,
+        dark:#D2914E,
+        light:#FDE8C7,
+        contrast:#fff
+    ),
+
+    "blend":(
+        color: #375829,
+        dark:#2B4A30,
+        light:#B1D6AE,
+        contrast:#fff
+    ),
+
+    "danger":(
+        color:#d95040,
+        contrast:#fff
+    )
+);
+
+
+
+@mixin text-color($txt){color:$txt !important;}
+@mixin themed-text($color){color:$color}
+@mixin themed-border($color){border-color:$color}
+@mixin themed-fill($color){fill:$color}
+@mixin themed-stroke($color){stroke:$color}
+@mixin themed-bg($bg, $text:#fff){
+    background-color:$bg !important;
+    color:$text;
+}
+
+@mixin outlined-btn($color, $contrast:#fff){
+    color:$color;
+    background-color:transparent;
+    border:1px solid $color;
+    transition: all 0.2s ease;
+
+    &:hover, &:focus, &:active{
+        background-color:$color;
+        color:$contrast;
+    }
+}
+
+@mixin filled-btn($bg, $text:#fff, $hover-bg:null){
+    background-color:$bg;
+    color:$text;
+    border:1px solid $bg;
+    transition:all 0.2s ease;
+
+    @if $hover-bg !=null {
+        &:hover, &:focus, &:active{background-color:$hover-bg !important;}
+    }
+}
+
+
+/*==========================================
+클래스 자동 생성
+==========================================*/
+
+@each $name, $vals in $colors{
+    $color:map-get($vals,color);
+    $contrast:map-get($vals,contrast);
+    $dark:if(map-has-key($vals,dark), map-get($vals,dark), null);
+    $light:if(map-has-key($vals,light), map-get($vals,light), null);
+
+
+    //기본 컬러 5종 [ .(색상명), .(색상명)-line, .(색상명)- ]
+    .#{$name}{@include themed-text($color)}
+    .#{$name}-bg{@include themed-bg($color,$contrast)}
+    .#{$name}-btn{@include outlined-btn($color,$contrast)}
+    .#{$name}-bg-btn {@include filled-btn($color,$contrast, $dark)}
+    .#{$name}-border {@include themed-border($color);}
+    .#{$name}-fill {@include themed-fill($color);}
+    .#{$name}-stroke {@include themed-stroke($color);}
+    .#{$name}-line {
+        @include themed-text($color);
+        @include themed-border($color);
+    }
+
+
+    @if $light !=null {
+        .#{$name}-light {@include themed-text($light)}
+        .#{$name}-light-bg{@include themed-bg($light,$contrast)}
+        .#{$name}-light-btn{@include outlined-btn($light,$contrast)}
+        .#{$name}-light-border {@include themed-border($light)}
+        .#{$name}-light-fill {@include themed-fill($light);}
+        .#{$name}-light-stroke {@include themed-stroke($light);}
+        .#{$name}-light-line {
+            @include themed-text($light);
+            @include themed-border($light);
+        }
+    }
+
+    
+    @if $dark !=null {
+        .#{$name}-dark{@include themed-text($dark)}
+        .#{$name}-dark-bg{@include themed-bg($dark,$contrast)}
+        .#{$name}-dark-btn{@include outlined-btn($dark,$contrast)}
+        .#{$name}-dark-border {@include themed-border($dark);}
+        .#{$name}-dark-fill {@include themed-fill($dark);}
+        .#{$name}-dark-stroke {@include themed-stroke($dark);}
+        .#{$name}-dark-line {
+            @include themed-text($dark);
+            @include themed-border($dark);
+        }
+    }
+
+}
+
+/*==========================================
+기타 색상 정리
+==========================================*/
+
+
+.text{color:#2E3A3A !important;}
+.text-light{color:#BDBDBD !important;}
+.text-dark{color:#707070 !important;}
+
+.bg-color{background-color:#FAF9F6;}
+.bg-color-badge{background-color:#FAF9F6 !important; color:#707070;}
+.divider, .dropdown-divider, hr{border-color:#DADADA !important; opacity:1;}

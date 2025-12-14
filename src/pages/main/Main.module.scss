@@ -1,0 +1,130 @@
+// main top _______________________________________________
+
+.top{padding:120px 0 80px;
+    .txtImg{
+        width:80px;
+        max-width:80px;
+        min-width:60px;
+        aspect-ratio:1/1;
+        background:url('../../assets/img/main/icon.png')no-repeat left bottom;
+        background-size:contain;
+    }
+
+    .topImg{
+        transition:all 0.2s ease;
+
+        .img{
+            width:100%;
+            aspect-ratio:1/1;
+            background:url('../../assets/img/main/maintopbg.png') no-repeat right center;
+            background-size:contain;
+        }
+    }
+}
+
+
+
+
+// main stats _______________________________________________
+
+.stats{
+  transition:all .2s ease;
+  article{
+    transition:all .2s ease;
+    border-right:1px solid #DADADA;
+    gap:48px;
+    &:last-child{border-right:none;}
+
+    .icon{
+      transition:all .2s ease;
+      width:56px;
+      height:56px;
+      stroke:#F8B661;
+      fill:#F8B661;
+      pointer-events:none;
+    }
+  }
+}
+
+
+
+
+// main posting _______________________________________________
+
+.mainAdd{
+
+    
+    article{
+        min-width:0;
+        transition:all .2s ease;
+        header{
+            padding:0 10px 18px 0;
+            border-bottom:1px solid #DADADA;
+
+            button{
+                padding:0; color:#707070;
+                text-decoration:none;
+                
+                &:hover{color:#707070; font-weight:500 !important;}
+            }
+        }
+
+        ul{padding:0 10px; gap:20px;
+
+            li{flex-wrap:nowrap; min-width:0;
+
+                strong{
+                    padding:8px 15px;
+                    border-radius:10px;
+                }
+
+                .title{
+                    overflow:hidden;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// main slide _________________________________________________
+
+.slideWrapper{
+    .slideBtn{
+        all:unset;
+        cursor: pointer;
+        color:rgba(46,58,58,.5);
+    }
+}
+
+
+@media (min-width:1201px){
+    .txtWarp{padding-left:240px;}
+} 
+
+@media (min-width:769px) and (max-width:1200px){
+    .txtWarp{padding-left:52px;}
+}
+
+@media (max-width:768px){
+    .txtWarp{margin:0 auto;
+    h1,p{text-align:center;}}
+    .txtImg{display:none;}
+    .topImg{order:-1;}
+
+    .stats{
+        article{
+        gap:24px;
+        border-right:none;
+        .icon{
+            margin-top: 78px;
+        }
+        }
+    }
+
+    .slideWrapper{margin-top: 50px;}
+}

@@ -1,0 +1,53 @@
+.wrapper{
+    height:300px;
+    padding:50px 0;
+    gap:70px;
+    
+
+    .content{
+        min-width:0;
+        max-width:900px;
+
+        .txt{
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .title{
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        
+        .titleBadge{border-radius: 10px;}
+
+
+        .region{
+            padding:8px 12px;
+            border-radius:10px;
+        }
+
+        .icon{
+            width:17px; height:17px;
+            stroke:#BDBDBD;
+        }
+    }
+
+    figure{
+        img{
+        width:300px;
+        height: auto;
+        aspect-ratio:3/2;
+        border-radius:30px;
+        object-fit:cover;
+        text-align:center;
+        transition: all .3s ease;
+            @media (max-width:768px){
+                width: 180px;
+                height: auto;
+            }
+        }
+    }
+}
+

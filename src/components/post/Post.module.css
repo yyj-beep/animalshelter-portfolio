@@ -1,0 +1,47 @@
+.wrapper {
+  height: 300px;
+  padding: 50px 0;
+  gap: 70px;
+}
+.wrapper .content {
+  min-width: 0;
+  max-width: 900px;
+}
+.wrapper .content .txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .content .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .content .titleBadge {
+  border-radius: 10px;
+}
+.wrapper .content .region {
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+.wrapper .content .icon {
+  width: 17px;
+  height: 17px;
+  stroke: #BDBDBD;
+}
+.wrapper figure img {
+  width: 300px;
+  height: auto;
+  aspect-ratio: 3/2;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .wrapper figure img {
+    width: 180px;
+    height: auto;
+  }
+}/*# sourceMappingURL=Post.module.css.map */

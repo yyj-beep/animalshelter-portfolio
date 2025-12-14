@@ -1,0 +1,46 @@
+.writtenIcon{
+    border:1px solid red;
+    animation: blinkBorder 1.5s step-start infinite;
+}
+@keyframes blinkBorder{
+    50%{
+        border-color: transparent;
+    }
+} 
+
+
+.banner{
+    width:100%;
+    height: auto;
+    aspect-ratio:1920/440;
+    background-size: cover;
+    background-position: center;
+    background-color:#e2e2e2;
+   }
+//.border{border: none;}
+.outline {
+    border: none !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottonSmAlign{
+    @media (max-width:768px){
+        margin-top: 10px;
+    }
+}
+
+
+//------------------------------------------------------------------------
+.postTop{
+    button{
+        padding:10px 16px;
+        border-radius:100px;
+
+        &:hover, &:active, &:focus{
+            span{color:#fff;}
+            svg{stroke:#fff;}
+        }
+    }
+}

@@ -1,0 +1,235 @@
+@charset "UTF-8";
+.wrapper {
+  height: 300px;
+  padding: 50px 0;
+  gap: 70px;
+}
+.wrapper .content {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 900px;
+}
+.wrapper .content .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .content .txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  color: #707070;
+}
+.wrapper .content .titleBadge {
+  border-radius: 10px;
+}
+.wrapper .content .tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 0px;
+}
+.wrapper .content .hashtag {
+  border: 1px solid;
+  padding: 8px 12px;
+  border-radius: 30px;
+  color: #D2914E;
+}
+.wrapper .content .postMeta {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .wrapper .content .postMeta {
+    margin-top: 10px;
+  }
+}
+.wrapper .content .commentInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+.wrapper .content .commentIcon {
+  width: 16px;
+  height: 16px;
+  color: #BDBDBD;
+}
+.wrapper .content .commentIcon path {
+  stroke: #BDBDBD;
+  stroke-width: 40;
+}
+.wrapper .content .commentCount {
+  font-weight: 500;
+  color: #BDBDBD;
+}
+.wrapper figure {
+  background-color: #D9D9D9;
+  width: 300px;
+  aspect-ratio: 3/2;
+  border-radius: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+.wrapper figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+/* 페이지네이션 전체 영역 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px; /* 테이블과의 간격 */
+}
+
+/* 페이지네이션 버튼 */
+.pageButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 6px 10px;
+  margin: 0 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+/* 페이지네이션 숫자 */
+.pageNumber {
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 활성 페이지의 발자국 아이콘 */
+.active .pawIcon {
+  opacity: 1;
+}
+
+/* 발자국 아이콘 (페이지네이션용) */
+.pawIcon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.3;
+}
+.pawIcon path {
+  fill: #FDE8C7;
+  stroke: #FDE8C7;
+}
+
+/* 검색창 전체 영역 */
+.searchBar {
+  width: 424px;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #D2914E;
+  border-radius: 999px;
+  padding: 10px 5px;
+}
+@media (max-width: 768px) {
+  .searchBar {
+    width: 250px;
+  }
+}
+
+/* 검색창 입력 필드 */
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0px 16px;
+  background: transparent;
+}
+.searchInput::-moz-placeholder {
+  color: #BDBDBD;
+}
+.searchInput::placeholder {
+  color: #BDBDBD;
+}
+
+/* 검색 버튼 */
+.searchButton {
+  background: #D2914E;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 0px 50px 50px 100px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 검색창 */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* 작성하기 버튼을 감싸는 영역 */
+/* 작성하기 버튼 스타일 */
+.writeButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #D2914E;
+  background-color: transparent;
+}
+
+/* 작성하기 텍스트 스타일 */
+.writeText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #D2914E;
+  font-family: "S-Core Dream", sans-serif;
+}
+
+/* 아이콘 크기 조절 */
+.writeIcon {
+  font-size: 18px;
+}
+.writeIcon path {
+  stroke: #D2914E;
+}
+
+@media (max-width: 768px) {
+  hr {
+    margin-top: -30px;
+  }
+}/*# sourceMappingURL=PostPetStory.module.css.map */

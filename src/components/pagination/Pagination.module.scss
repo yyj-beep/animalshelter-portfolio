@@ -1,0 +1,25 @@
+.pagination{
+
+    button{
+        position:relative;
+        width:40px; aspect-ratio:1/1;
+        background-color:transparent;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border:none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        .paw{
+            fill:#FDE8C7;
+            position:absolute;
+            width:40px; height:40px;
+            right:0; bottom:0;
+            z-index:-1;
+        }
+        
+        &:disabled{opacity:0.4; cursor: not-allowed;}
+        &.active{font-weight:600;}
+    }
+}

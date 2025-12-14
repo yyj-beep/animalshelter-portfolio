@@ -1,0 +1,80 @@
+//.info-wrap{margin-left: 1vw;}
+
+//메인 이미지 사이즈
+
+.custom-img{
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+
+//info 관련 정렬
+//.info-box{margin-left: 10vw;}
+
+//코코브라더스, 모집중 정렬
+.info-title{width: 200px; 
+  display: flex;
+  align-items: center;
+}
+
+.label{width: 300px; height: 20px;}
+
+.s-ml1{margin-left: 65px;}
+.s-ml2{margin-left: 30px;}
+.s-ml3{margin-left: 15px;}
+
+.recruit{width: 50px; height: 20px; 
+  border-radius: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  
+}
+
+.detail-btn{
+  width: 85px; height: 37px; 
+  border-radius: 7px;
+  background-color: #3A7F78;
+  text-align: center;
+  line-height: 37px;
+  color: white;
+  
+}
+.detail-wrap{display: flex;}
+
+
+//.author-interaction-section{margin-left: 2vw;}
+
+.finderFee{
+   width: 85px; height: 37px; 
+  border-radius: 7px;
+  border:1px solid #3A7F78;
+  background: none;
+  text-align: center;
+  line-height: 37px;
+  color:#3A7F78;
+  margin-left: 1vw;
+}
+.finderFee-wrap{display: flex;}
+.report-btn{border-radius: 50px;}
+
+.author-info{
+  margin-left: -30px;
+}
+
+.review{
+  width: 800px; 
+  height: auto; 
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* src/styles/_PostModal.scss */
+
+// Bootstrap 변수를 오버라이드하거나 직접 사용
+
+

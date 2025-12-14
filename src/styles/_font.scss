@@ -1,0 +1,108 @@
+h1{font-family:'Cafe24Ohsquare', sans-serif; font-size:48px; line-height:1.2em;}
+h2{font-family:'Cafe24Ohsquare', sans-serif; font-size:35px; line-height:1.2em;}
+h3{font-size:24px; font-weight:500 !important;}
+h4{font-size:24px; font-weight:500 !important; line-height:1.8em;}
+
+p{line-height:1.8em;}
+
+.display-1{
+    all:unset;
+    font-family:'Poppins', sans-serif;
+    font-weight:700 !important; font-size:80px;
+    font-feature-settings: 'ss04' on;
+}
+
+.body-large{font-size:20px; line-height:1.8em; font-weight:400 !important;}
+.body-small{font-size:14px; line-height:1.8em; font-weight:400 !important;}
+
+.nav-default{font-family:'Cafe24Ohsquare', sans-serif; font-size:18px;}
+.nav-small{font-family:'Montserrat', 'Poppins', 'S-CoreDream',sans-serif; font-size:14px; font-weight:500 !important;}
+
+.btn-custom{font-size:16px; font-weight:600 !important;}
+.caption{font-size:14px; font-weight:500 !important; line-height:1.5em;}
+.tab{font-size:12px; font-weight:500 !important; line-height:1.2em;}
+
+.num{font-family:'Poppins', sans-serif; font-size:20px; font-weight:600;}
+
+
+//반응형 폰트 크기 설정
+/* ✅ 모바일 대응 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3, h4 {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  p{font-size:14px;}
+
+  .display-1 {
+    font-size: 44px;
+  }
+
+  .body-large {
+    font-size: 16px;
+  }
+
+  .body-small {
+    font-size: 12px;
+  }
+
+  .nav-default {
+    font-size: 14px;
+  }
+
+  .nav-small {
+    font-size: 12px;
+  }
+
+  .btn-custom {
+    font-size: 10px;
+  }
+
+  .caption, .tab {
+    font-size: 10px;
+  }
+
+  .num{font-size:16px;}
+}
+
+/* ✅ 태블릿 대응 */
+@media (max-width: 1439.98px) and (min-width: 769px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+  h3,h4 {
+    font-size: 20px;
+  }
+
+  .display-1 {
+    font-size: 54px;
+  }
+
+  .body-large {
+    font-size: 18px;
+  }
+
+  .body-small {
+    font-size: 14px;
+  }
+
+  .btn-custom {
+    font-size: 12px;
+  }
+   .caption, .tab {
+    font-size: 12px;
+  }
+  .nav-default{font-size: 16px;}
+}
