@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/animalshelter-portfolio/static/css/main.52f20609.css",
-    "main.js": "/animalshelter-portfolio/static/js/main.c88ad911.js",
+    "main.js": "/animalshelter-portfolio/static/js/main.1dbc3e5f.js",
     "static/media/Cafe24Ohsquare.woff": "/animalshelter-portfolio/static/media/Cafe24Ohsquare.2e17df79dbb7400ac3ef.woff",
     "static/media/S-CoreDream-5Medium.woff": "/animalshelter-portfolio/static/media/S-CoreDream-5Medium.b3da2050511fe7ba056a.woff",
     "static/media/S-CoreDream-4Regular.woff": "/animalshelter-portfolio/static/media/S-CoreDream-4Regular.9219235931b35ddc8857.woff",
@@ -35,10 +35,10 @@
     "static/media/dog1.jpg": "/animalshelter-portfolio/static/media/dog1.7e2303d1114e7b79e501.jpg",
     "index.html": "/animalshelter-portfolio/index.html",
     "main.52f20609.css.map": "/animalshelter-portfolio/static/css/main.52f20609.css.map",
-    "main.c88ad911.js.map": "/animalshelter-portfolio/static/js/main.c88ad911.js.map"
+    "main.1dbc3e5f.js.map": "/animalshelter-portfolio/static/js/main.1dbc3e5f.js.map"
   },
   "entrypoints": [
     "static/css/main.52f20609.css",
-    "static/js/main.c88ad911.js"
+    "static/js/main.1dbc3e5f.js"
   ]
 }
